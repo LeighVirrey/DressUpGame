@@ -13,7 +13,8 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MongoDBURI": "mongodb+srv://lvirrey:Nc210859027@toonzk.0byxsso.mongodb.net/"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7208;http://localhost:4280"

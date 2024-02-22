@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using DressUpGame.Data;
+using MongoDB.Driver;
+
 
 namespace https
 {
@@ -15,15 +17,25 @@ namespace https
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            var mongoConnectionString = Environment.GetEnvironmentVariable("MongoDBURI");
+            var mongoClient = new MongoClient(mongoConnectionString);
+            var mongoDatabase = mongoClient.GetDatabase("DressUpDollDB");
             builder.Services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(builder.Configuration.GetConnectionString
-            ("DefaultConnection")));
+            options.UseMongoDB(mongoDatabase.Client, mongoDatabase.DatabaseNamespace.DatabaseName));
+
+            //builder.Services.AddDbContext<AppDbContext>(options =>
+            //options.UseMongoDB("mongodb+srv://lvirrey:Nc210859027@toonzk.0byxsso.mongodb.net/?retryWrites=true&w=majority", "DressUpDollDB"));                     
+
 
             //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDbContext>();
 
             builder.Services.AddIdentity<IdentityUser, IdentityRole>(
-            options => options.SignIn.RequireConfirmedAccount = false).AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
+                MongoOptionsExtensions =>
+                {
+                    MongoOptionsExtensions.SignIn.RequireConfirmedAccount = false;
+                }).AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
+            //builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+            //options => options.SignIn.RequireConfirmedAccount = false).AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
 
             builder.Services.AddRazorPages();
 
