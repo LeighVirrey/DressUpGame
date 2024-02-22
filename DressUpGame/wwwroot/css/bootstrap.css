@@ -12547,3 +12547,24 @@ legend {
 .card .h6 {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6), 0 0 3px rgba(255, 255, 255, 0.5), 0 0 0.5rem rgba(255, 255, 255, 0.3), 0 0 2rem rgba(255, 255, 255, 0.2);
 }
+
+
+
+.ad {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #f2f2f2;
+    /* Add any other styles for the ads here */
+}
+
+.game-container {
+    float: left;
+    width: 60%;
+    height: 600px; /* Adjust height as needed */
+    background-color: #fff;
+    /* Add any other styles for the game container here */
+}
+
+.clear {
+    clear: both;
