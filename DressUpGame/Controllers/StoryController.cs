@@ -6,7 +6,7 @@ namespace DressUpGame.Controllers
 {
     public class StoryController : Controller
     {
-        private List<Scene> storyScenes = new List<Scene>(); // Assuming you have a list of scenes
+        private List<Scene> storyScenes = new List<Scene>(); 
 
         private int currentSceneIndex = 0; // Current index to keep track of the current scene
 
