@@ -10,7 +10,7 @@
     <style>
         /* Add your CSS styles for the dress-up game here */
         
-        }
+        
     </style>
 </head>
 <body>
@@ -21,9 +21,26 @@
     </div>
 
     <div class="game-container">
+        <div>
+            <h1>Story Introduction</h1>
+            <p>@ViewBag.Index</p>
+        </div>
         <!-- Add your dress-up game content here -->
         <h1>Dress Up Game</h1>
         <p>This is where the dress-up game would go.</p>
+        <div>
+
+
+            @using (Html.BeginForm("Prev", "StoryController", FormMethod.Post))
+            {
+                <button type="submit">Previous</button>
+            }
+
+            @using (Html.BeginForm("Next", "StoryController", FormMethod.Post))
+            {
+                <button type="submit">Next</button>
+            }
+        </div>
     </div>
 
     <div class="ad">
