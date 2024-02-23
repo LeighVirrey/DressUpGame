@@ -2,7 +2,7 @@
 {
     public class Scene
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
 
         
        
