@@ -1,0 +1,14 @@
+﻿
+@model Character
+@if(ViewBag.Data != null)
+{
+    @foreach (var item in ViewBag.Data)
+    {
+        <img src="data:image/png;base64,@item["Image"]" />
+    }
+}
+<form asp-controller="Home" asp-action="Add" method="post" enctype="multipart/form-data">
+    <label asp-for="Image"></label>
+    <input type="file" asp-for="Image" />
+    <button type="submit">Submit</button>
+</form>

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using DressUpGame.Data;
+using MongoDB.Driver;
+using MongoDB.Bson;
 
 namespace https
 {
