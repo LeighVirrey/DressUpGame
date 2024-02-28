@@ -36,6 +36,11 @@ namespace DressUpGame.Controllers
         {
             return View("Page4");
         }
+        public ActionResult Page4()
+        {
+            return View("Page5");
+        }
+
         public ActionResult Page5()
         {
             return View("Page6");
