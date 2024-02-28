@@ -133,6 +133,20 @@
   --bs-form-invalid-border-color: #e44c55;
 }
 
+
+.game-container {
+position: relative;
+height: 100vh; /* This ensures the container takes up the full viewport height */
+}
+
+.Btn-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 [data-bs-theme=dark] {
   color-scheme: dark;
   --bs-body-color: #dee2e6;
