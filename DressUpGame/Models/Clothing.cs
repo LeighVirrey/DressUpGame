@@ -5,7 +5,7 @@
 		public enum Type{
 			HAT,
 			HAIR,
-			SHRIT,
+			SHIRT,
 			PANTS,
 			SHOES
 		}
