@@ -22,12 +22,12 @@ namespace DressUpGame.Controllers
        
         public ActionResult Prev()
         {
-            return View("StartGame");
-        }
+            return View();
+        }   
 
         public ActionResult Next()
         {
-            return View("Page1");
+            return View();
         }
 
         public ActionResult Page1()
