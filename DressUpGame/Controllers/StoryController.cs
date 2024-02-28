@@ -19,43 +19,50 @@ namespace DressUpGame.Controllers
         }
 
 
+       
+        public ActionResult Prev()
+        {
+            return View("StartGame");
+        }
+
         public ActionResult Next()
         {
             return View("Page1");
         }
 
-        public ActionResult Prev()
+        public ActionResult Page1()
         {
-            return View("StartGame");
+            return View();
         }
+
         public ActionResult Page2()
         {
-            return View("Page3");
+            return View();
         }
         public ActionResult Page3()
         {
-            return View("Page4");
+            return View();
         }
         public ActionResult Page4()
         {
-            return View("Page5");
+            return View();
         }
 
         public ActionResult Page5()
         {
-            return View("Page6");
+            return View();
         }
         public ActionResult Page6()
         {
-            return View("Page7");
+            return View();
         }
         public ActionResult Page7()
         {
-            return View("Page8");
+            return View(); 
         }
         public ActionResult Page8()
         {
-            return View("Page9");
+            return View();
         }
 
 
