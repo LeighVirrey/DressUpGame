@@ -12,14 +12,33 @@ namespace DressUpGame.Data
             Setup();
             return DBcollection.Find(Builders<BsonDocument>.Filter.Empty).ToList();
         }
-        public void AddImage(string Image)
+        public void AddImage(string Image, string name, string type)
         {
             Setup();
-            BsonDocument doc = new BsonDocument
+            if(type == null && name == null)
+            {
+                BsonDocument doc = new BsonDocument
             {
                 {"Image", Image}
             };
-            DBcollection.InsertOne(doc);
+                DBcollection.InsertOne(doc);
+            }
+            else
+            {
+                BsonDocument doc = new BsonDocument
+            {
+                {"Image", Image},
+                {"Name", name},
+                {"Type", type}
+            };
+                DBcollection.InsertOne(doc);
+            }
+        }
+        public List<BsonDocument> getImagesType(string clothing)
+        {
+            Setup();
+            var filter = Builders<BsonDocument>.Filter.Eq("Type", clothing);
+            return DBcollection.Find(filter).ToList();
         }
         public void Setup()
         {

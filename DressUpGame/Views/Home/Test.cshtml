@@ -1,14 +1,35 @@
 ﻿
-@model Character
+@model Clothing
 @if(ViewBag.Data != null)
 {
     @foreach (var item in ViewBag.Data)
     {
         <img src="data:image/png;base64,@item["Image"]" />
+        <p>@item["Name"]</p>
+        <p>@item["Type"]</p>
     }
 }
+<h2>upload clothes</h2>
 <form asp-controller="Home" asp-action="Add" method="post" enctype="multipart/form-data">
-    <label asp-for="Image"></label>
+    <label asp-for="type"></label>
+<select asp-for="type">
+    <option value="Hat">Hat</option>
+    <option value="Hair">Hair</option>
+    <option value="Shirt">Shirt</option>
+    <option value="Pants">Pants</option>
+    <option value="Shoes">Shoes</option>
+    <option value="Character">Character</option>
+    <option value="Ad">Ad</option>
+    <option value="Scene">Scene</option>
+</select>
+    <label asp-for="Name"></label>
+    <input type="text" asp-for="Name" />
+<label asp-for="Image"></label>
     <input type="file" asp-for="Image" />
     <button type="submit">Submit</button>
 </form>
+@* <form asp-controller="Home" asp-action="Add" method="post" enctype="multipart/form-data">
+    <label asp-for="Image"></label>
+    <input type="file" asp-for="Image" />
+    <button type="submit">Submit</button>
+</form> *@

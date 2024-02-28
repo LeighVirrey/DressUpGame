@@ -26,7 +26,6 @@ namespace https
 
             builder.Services.AddIdentity<IdentityUser, IdentityRole>(
             options => options.SignIn.RequireConfirmedAccount = false).AddDefaultUI().AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
-
             builder.Services.AddRazorPages();
 
             var app = builder.Build();

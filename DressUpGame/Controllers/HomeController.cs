@@ -11,7 +11,8 @@ namespace DressUpGame.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        MongoDBDal DBdal = new MongoDBDal();
+        MongoDBDal DBDal = new MongoDBDal();
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -29,16 +30,17 @@ namespace DressUpGame.Controllers
             return View();
         }
 
-
+        [Route("debug")]
+        [Route("home/test")]
         public IActionResult Test()
         {
             //List<Json> data = DBdal.GetImages().ToJson();
-            List<BsonDocument> BsonList = DBdal.GetImages();
+            List<BsonDocument> BsonList = DBDal.GetImages();
             var ObjList = BsonList.ConvertAll(BsonTypeMapper.MapToDotNetValue);
             ViewBag.Data = ObjList;
             return View();
         }
-        public IActionResult Add(IFormFile Image)
+        public IActionResult Add(IFormFile Image, string? type, string? name)
         {
             if (Image != null)
             {
@@ -46,7 +48,7 @@ namespace DressUpGame.Controllers
                 Image.CopyTo(ms);
                 string ImageBytes = Convert.ToBase64String(ms.ToArray());
                 ms.Close();
-                DBdal.AddImage(ImageBytes);
+                DBDal.AddImage(ImageBytes, name, type);
             }
             return RedirectToAction("Test");
         }
