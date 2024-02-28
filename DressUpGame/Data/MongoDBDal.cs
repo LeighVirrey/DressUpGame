@@ -40,6 +40,18 @@ namespace DressUpGame.Data
             var filter = Builders<BsonDocument>.Filter.Eq("Type", clothing);
             return DBcollection.Find(filter).ToList();
         }
+        public List<BsonDocument> getAds()
+        {
+            Setup();
+            var filter = Builders<BsonDocument>.Filter.Eq("Type", "Ad");
+            return DBcollection.Find(filter).ToList();
+        }
+        public BsonDocument getMia()
+        {
+            Setup();
+            var filter = Builders<BsonDocument>.Filter.Eq("Name", "Mia");
+            return DBcollection.Find(filter).FirstOrDefault();
+        }
         public void Setup()
         {
             IMongoClient mongoClient = new MongoClient("mongodb+srv://lvirrey:Nc210859027@toonzk.0byxsso.mongodb.net/");
