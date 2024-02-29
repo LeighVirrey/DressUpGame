@@ -40,6 +40,17 @@ namespace DressUpGame.Data
             var filter = Builders<BsonDocument>.Filter.Eq("Type", clothing);
             return DBcollection.Find(filter).ToList();
         }
+        public List<BsonDocument> GetScenes()
+        {
+            Setup();
+            return DBcollection.Find(Builders<BsonDocument>.Filter.Empty).ToList();
+        }
+        public BsonDocument GetScene(string name)
+        {
+            Setup();
+            var filter = Builders<BsonDocument>.Filter.Eq("Name", name);
+            return DBcollection.Find(filter).FirstOrDefault();
+        }
         public List<BsonDocument> getAds()
         {
             Setup();

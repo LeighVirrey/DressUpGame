@@ -10,10 +10,8 @@ namespace DressUpGame.Controllers
     public class StoryController : Controller
     {
         MongoDBDal DBDal = new MongoDBDal();
-        private static List<BsonDocument> ads; 
         public StoryController()
         {
-            ads = DBDal.getAds();
         }
         
         //private List<Scene> storyScenes = new List<Scene>(); 

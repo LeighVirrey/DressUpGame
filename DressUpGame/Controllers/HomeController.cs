@@ -26,6 +26,8 @@ namespace DressUpGame.Controllers
 
         public IActionResult Index()
         {
+            BsonDocument thumbnail = DBDal.getMia();
+            ViewBag.Thumbnail = thumbnail["Image"].ToString();
             return View();
         }
 
