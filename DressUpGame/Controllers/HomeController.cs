@@ -3,7 +3,11 @@ using DressUpGame.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
+using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
+using Newtonsoft.Json;
 using System.Diagnostics;
+using System.Text;
 using System.Text.Json;
 
 namespace DressUpGame.Controllers
@@ -27,6 +31,13 @@ namespace DressUpGame.Controllers
 
         public IActionResult Game()
         {
+            List<BsonDocument> adConv = DBDal.getAds();
+            List<string> ads = new List<string>();
+            foreach (BsonDocument ad in adConv)
+            {
+                ads.Add(ad["Image"].ToString());
+            }
+            ViewBag.Ads = ads;
             return View();
         }
 

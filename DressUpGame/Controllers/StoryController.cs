@@ -1,13 +1,20 @@
-﻿using DressUpGame.Models;
+﻿using DressUpGame.Data;
+using DressUpGame.Models;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using static System.Formats.Asn1.AsnWriter;
 
 namespace DressUpGame.Controllers
 {
     public class StoryController : Controller
     {
-
-
+        MongoDBDal DBDal = new MongoDBDal();
+        private static List<BsonDocument> ads; 
+        public StoryController()
+        {
+            ads = DBDal.getAds();
+        }
         
         //private List<Scene> storyScenes = new List<Scene>(); 
 
@@ -15,6 +22,7 @@ namespace DressUpGame.Controllers
 
         public ActionResult StartGame()
         {
+            
            return View();
         }
 
