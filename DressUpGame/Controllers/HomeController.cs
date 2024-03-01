@@ -32,13 +32,6 @@ namespace DressUpGame.Controllers
 
         public IActionResult Game()
         {
-            List<BsonDocument> adConv = DBDal.getAds();
-            List<string> ads = new List<string>();
-            foreach (BsonDocument ad in adConv)
-            {
-                ads.Add(ad["Image"].ToString());
-            }
-            ViewBag.Ads = ads;
             return View();
         }
 
