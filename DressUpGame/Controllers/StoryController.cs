@@ -82,6 +82,69 @@ namespace DressUpGame.Controllers
             return View();
         }
 
+        public ActionResult Page11()
+        {
+            return View();
+        }
+
+        public ActionResult Page12()
+        {
+            return View();
+        }
+
+
+        public ActionResult Page13()
+        {
+            return View();
+        }
+        public ActionResult Page14()
+        {
+            return View();
+        }
+
+        public ActionResult Page15()
+        {
+            return View();
+        }
+
+        public ActionResult Page16()
+        {
+            return View();
+        }
+
+        public ActionResult Page17()
+        {
+            return View();
+        }
+
+        public ActionResult Page18()
+        {
+            return View();
+        }
+
+        public ActionResult Page19()
+        {
+            return View();
+        }
+
+        public ActionResult Page20()
+        {
+            return View();
+        }
+        public ActionResult Page23()
+        {
+            return View();
+        }
+        public ActionResult Page24()
+        {
+            return View();
+        }
+        public ActionResult Page25()
+        {
+            return View();
+        }
+
+
 
 
 
