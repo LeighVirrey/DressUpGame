@@ -12617,8 +12617,8 @@ legend {
 
 .game-container {
     float: left;
-    width: 60%;
-    height: 600px; /* Adjust height as needed */
+    /*width: 60%;
+    height: 600px;*/ /* Adjust height as needed */
     background-color: #fff;
     /* Add any other styles for the game container here */
 }
