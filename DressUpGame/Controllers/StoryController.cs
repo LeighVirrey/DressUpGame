@@ -77,10 +77,7 @@ namespace DressUpGame.Controllers
         }
 
 
-        public ActionResult Page10()
-        {
-            return View();
-        }
+ 
 
         public ActionResult Page11()
         {
@@ -131,7 +128,18 @@ namespace DressUpGame.Controllers
         {
             return View();
         }
-        public ActionResult Page23()
+
+		public ActionResult Page21()
+		{
+			return View();
+		}
+
+		public ActionResult Page22()
+		{
+			return View();
+		}
+
+		public ActionResult Page23()
         {
             return View();
         }

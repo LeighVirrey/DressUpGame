@@ -12,10 +12,21 @@ namespace DressUpGame.Controllers
        
 
         //private List<Clothing> clothingList = DBdal.GetImages();
-        public IActionResult GameDiplay()
+        public IActionResult GameOne()
 		{
 			return View();
 		}
+
+		public IActionResult GameTwo()
+		{
+			return View();
+		}
+
+		public IActionResult GameThree()
+		{
+			return View();
+		}
+
 
 		public IActionResult ClothingListm()
 		{
