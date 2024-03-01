@@ -1,0 +1,54 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    ViewBag.Title = "Dress Up Game";
+}
+@model Scene
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="ad">
+        <!-- Add your ad content here -->
+        <h2>Ad Space</h2>
+        <p>This is an advertisement.</p>
+    </div>
+
+    <div class="game-container">
+       
+        <div class="Btn-bottom">
+
+            <a asp-controller="Story" asp-action="Page15" class="btn btn-primary mx-2">Prev</a>
+
+            <a asp-controller="Story" asp-action="Page18" class="btn btn-primary mx-2">Next</a>
+
+
+        </div>
+        <div class="text-container">
+            <p class="character-name">
+                <b>
+                    Lady Isadora
+
+                </b>
+            </p>
+            <p class="dialogue">
+                In the metaverse of course! The network team thought it was a good idea to try something new. Now let's get you a headset and you can dress up your avatar.
+
+            </p>
+        </div>
+
+    <div class="ad">
+        <!-- Add your ad content here -->
+        <h2>Ad Space</h2>
+        <p>This is an advertisement.</p>
+    </div>
+
+    <div class="clear"></div>
+</body>
+</html>
