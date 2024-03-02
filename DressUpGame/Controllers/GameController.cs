@@ -8,12 +8,14 @@ namespace DressUpGame.Controllers
 	public class GameController : Controller
 	{
 		MongoDBDal DBdal = new MongoDBDal();
-		List<Clothing> ClothingList;
-       
+        List<Clothing> ClothingList = new List<Clothing>();
+
 
         //private List<Clothing> clothingList = DBdal.GetImages();
         public IActionResult GameOne()
 		{
+
+			ClothingListm();
 			return View();
 		}
 
@@ -28,7 +30,7 @@ namespace DressUpGame.Controllers
 		}
 
 
-		public IActionResult ClothingListm()
+		public void ClothingListm()
 		{
 			//List<BsonDocument> reeList = new List<BsonDocument>();
 			//var ree = DBdal.GetImages().ConvertAll(BsonTypeMapper.MapToDotNetValue);
@@ -53,7 +55,8 @@ namespace DressUpGame.Controllers
 			//		name.Add(bs["Name"].ToString());
 			//	}
 			//}
-			//This would have probably worked but it called on the database too many times and was not efficient, rewritten
+			//
+			//This would have probably worked but it called on the database too many times and was not efficient, rewritten to what's down below. Marcus had the right idea -ZK
 
 
 
@@ -61,21 +64,19 @@ namespace DressUpGame.Controllers
 			{
 				if (bs["Type"].ToString() == "Hat" || bs["Type"].ToString() == "Hair" || bs["Type"].ToString() == "Shirt" || bs["Type"].ToString() == "Pants" || bs["Type"].ToString() == "Shoes")
 				{
-                    typeClass.Add(bs["Type"].ToString());
+                    typeClass.Add(bs["Type"].ToString().ToUpper());
                     img.Add(bs["Image"].ToString());
                     name.Add(bs["Name"].ToString());
                 }
             }
 			
-			for(int i = 0; i <= img.Count(); i++)
+			for(int i = 0; i <= img.Count() - 1; i++)
 			{
 				Clothing c = new Clothing(typeClass[i], name[i], img[i]);
 
 				ClothingList.Add(c);
 
 			}
-
-			return View();
 		}
 	}
 }
