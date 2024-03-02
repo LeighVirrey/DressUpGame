@@ -266,7 +266,7 @@ namespace DressUpGame.Controllers
 			{
 				BackgroundImgURL = "~/images/black screen.png"
 			};
-
+			ViewBag.Next = "Page24";
 			return View(scene);
 		}
         public ActionResult Page24()

@@ -45,6 +45,10 @@ namespace DressUpGame.Controllers
             ViewBag.Title = "GameOne";
             return View();
 		}
+		public IActionResult Done()
+		{
+			return RedirectToAction(ViewBag.Next, "Story");
+		}
 
 		public IActionResult SelectClothing(string c, string view)
 		{
