@@ -1,39 +1,9 @@
-﻿@{
-	ViewBag.Title = "Dress Up Game";
+﻿@model Tuple<List<Clothing>, Character>
+<div class="miaImg">
+    <img src="data:image/png;base64,@Model.Item2.Image" alt="@Model.Item2.Name" />
+</div>
+@foreach (var item in Model.Item1)
+{
+    <partial name="PartialViewGame" for="@item" />
 }
-@model Scene
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>@ViewBag.Title</title>
-</head>
-<body>
-	<div class="ad">
-		<!-- Add your ad content here -->
-		<h2>Ad Space</h2>
-		<p>This is an advertisement.</p>
-	</div>
-
-	<div class="game-container">
-
-		<div class="Btn-bottom">
-
-
-
-			<a asp-controller="Story" asp-action="Page24" class="btn btn-primary mx-2">Next</a>
-
-
-
-		</div>
-
-	</div>
-	<div class="ad">
-		<!-- Add your ad content here -->
-		<h2>Ad Space</h2>
-		<p>This is an advertisement.</p>
-	</div>
-
-	<div class="clear"></div>
-</body>
-</html>
+```
