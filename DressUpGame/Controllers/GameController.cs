@@ -5,68 +5,76 @@ using MongoDB.Bson;
 
 namespace DressUpGame.Controllers
 {
+
 	public class GameController : Controller
 	{
 		MongoDBDal DBdal = new MongoDBDal();
         List<Clothing> ClothingList = new List<Clothing>();
 
-		//List<Clothing> ClothingList = new List<Clothing>();
-
-		private Character character;
+        //List<Clothing> ClothingList = new List<Clothing>();
 
 
-		//private List<Clothing> clothingList = DBdal.GetImages();
-		public IActionResult GameOne()
+        //private List<Clothing> clothingList = DBdal.GetImages();
+        public IActionResult GameOne()
 		{
 
 			ClothingListm();
 			BsonDocument bsonElements = DBdal.getMia();
-			character = new Character(bsonElements["Image"].ToString(), bsonElements["Name"].ToString(), null, null, null, null, null);
-            var tuple = new Tuple<List<Clothing>, Character>(ClothingList, character);
+			Global.Mia.Image = bsonElements["Image"].ToString();
+            var tuple = new Tuple<List<Clothing>, Character>(ClothingList, Global.Mia);
+			ViewBag.Title = "GameOne";
 			return View(tuple);
 		}
 
 		public IActionResult GameTwo()
 		{
             ClothingListm();
+            BsonDocument bsonElements = DBdal.getMia();
+            Global.Mia.Image = bsonElements["Image"].ToString();
+            var tuple = new Tuple<List<Clothing>, Character>(ClothingList, Global.Mia);
+            ViewBag.Title = "GameOne";
             return View();
 		}
 
 		public IActionResult GameThree()
 		{
             ClothingListm();
+            BsonDocument bsonElements = DBdal.getMia();
+            Global.Mia.Image = bsonElements["Image"].ToString();
+            var tuple = new Tuple<List<Clothing>, Character>(ClothingList, Global.Mia);
+            ViewBag.Title = "GameOne";
             return View();
 		}
 
-		public IActionResult SelectClothing(Clothing c)
+		public IActionResult SelectClothing(string c, string view)
 		{
-
-			if (c.type != null)
+            ClothingListm();
+            Clothing clothing = ClothingList.Find(x => x.Name == c);
+			if (clothing.type != null)
 			{
-				if (c.type == "Hat")
+				if (clothing.type == "HAT")
 				{
-					character.Hat = c;
+					Global.Mia.Hat = clothing;
 				}
-				if (c.type == "Hair")
+				if (clothing.type == "HAIR")
 				{
-					character.Hair = c;
+                    Global.Mia.Hair = clothing;
 				}
-				if (c.type == "Shirt")
+				if (clothing.type == "SHIRT")
 				{
-					character.Shirt = c;
+                    Global.Mia.Shirt = clothing;
 				}
-				if (c.type == "Pants")
+				if (clothing.type == "PANTS")
 				{
-					character.Pants = c;
+                    Global.Mia.Pants = clothing;
 				}
-				if (c.type == "Shoes")
+				if (clothing.type == "SHOES")
 				{
-					character.Shoes = c;
+                    Global.Mia.Shoes = clothing;
 				}
 
 			}
-
-            return RedirectToAction("GameOne", "GameOne");
+            return Redirect(view);
 		}
 
 
@@ -93,7 +101,6 @@ namespace DressUpGame.Controllers
             }
 			
 			for(int i = 0; i <= img.Count() - 1; i++)
->>>>>>> 08bba8ebd4a4fcfd26cafe05afade3723b7398e8
 			{
 				Clothing c = new Clothing(typeClass[i], name[i], img[i]);
 
