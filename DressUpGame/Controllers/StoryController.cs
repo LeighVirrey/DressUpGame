@@ -37,22 +37,42 @@ namespace DressUpGame.Controllers
 
         public ActionResult Next()
         {
-            return View();
-        }
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/black screen.png"
+			};
+
+			return View(scene);
+		}
 
         public ActionResult Page1()
         {
-            return View();
-        }
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/black screen.png"
+			};
+
+			return View(scene);
+		}
 
         public ActionResult Page2()
         {
-            return View();
-        }
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/black screen.png"
+			};
+
+			return View(scene);
+		}
         public ActionResult Page3()
         {
-            return View();
-        }
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/black screen.png"
+			};
+
+			return View(scene);
+		}
         public ActionResult Page4()
         {
             Scene scene = new Scene()
@@ -65,12 +85,22 @@ namespace DressUpGame.Controllers
 
         public ActionResult Page5()
         {
-            return View();
+            Scene scene = new Scene()
+            {
+                BackgroundImgURL = "~/images/Room-Scene.png"
+            };
+
+            return View(scene);
         }
 
         public ActionResult Street()
         {
-            return View();
+            Scene scene = new Scene()
+            {
+                BackgroundImgURL = "~/images/buildings.png"
+            };
+
+            return View(scene);
         }
         public ActionResult Page6()
         {
@@ -137,7 +167,7 @@ namespace DressUpGame.Controllers
         {
             Scene scene = new Scene()
             {
-                BackgroundImgURL = "~/images/Building-Scene.png"
+                BackgroundImgURL = "~/images/black screen.png"
             };
 
             return View(scene);
@@ -145,7 +175,12 @@ namespace DressUpGame.Controllers
 
         public ActionResult Page20()
         {
-            return View();
+            Scene scene = new Scene()
+            {
+                BackgroundImgURL = "~/images/Building-Scene.png"
+            };
+
+            return View(scene);
         }
 
 		public ActionResult Page21()
@@ -164,8 +199,13 @@ namespace DressUpGame.Controllers
         }
         public ActionResult Page24()
         {
-            return View();
-        }
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+
+			return View(scene);
+		}
         public ActionResult Page25()
         {
             return View();
