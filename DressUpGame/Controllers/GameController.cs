@@ -21,12 +21,14 @@ namespace DressUpGame.Controllers
 
 		public IActionResult GameTwo()
 		{
-			return View();
+            ClothingListm();
+            return View();
 		}
 
 		public IActionResult GameThree()
 		{
-			return View();
+            ClothingListm();
+            return View();
 		}
 
 
@@ -64,7 +66,7 @@ namespace DressUpGame.Controllers
 			{
 				if (bs["Type"].ToString() == "Hat" || bs["Type"].ToString() == "Hair" || bs["Type"].ToString() == "Shirt" || bs["Type"].ToString() == "Pants" || bs["Type"].ToString() == "Shoes")
 				{
-                    typeClass.Add(bs["Type"].ToString().ToUpper());
+                    typeClass.Add(bs["Type"].ToString());
                     img.Add(bs["Image"].ToString());
                     name.Add(bs["Name"].ToString());
                 }
