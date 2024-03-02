@@ -53,7 +53,8 @@ namespace DressUpGame.Controllers
 			//		name.Add(bs["Name"].ToString());
 			//	}
 			//}
-			//This would have probably worked but it called on the database too many times and was not efficient, rewritten
+			//
+			//This would have probably worked but it called on the database too many times and was not efficient, rewritten to what's down below. Marcus had the right idea -ZK
 
 
 
