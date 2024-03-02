@@ -288,11 +288,155 @@ namespace DressUpGame.Controllers
 			return View(scene);
 		}
 
+		public ActionResult Page26()
+		{
+			return View();
+		}
+
+		public ActionResult Page27()
+		{
+			return View();
+		}
+
+		public ActionResult Page28()
+		{
+			return View();
+		}
+
+		public ActionResult Page29()
+		{
+			return View();
+		}
+
+		public ActionResult Page30()
+		{
+			return View();
+		}
+
+		public ActionResult Page31()
+		{
+			return View();
+		}
+
+		public ActionResult Page32()
+		{
+			return View();
+		}
+
+		public ActionResult Page33()
+		{
+			return View();
+		}
+
+		public ActionResult Page34()
+		{
+			return View();
+		}
+
+		public ActionResult Page35()
+		{
+			return View();
+		}
+
+		public ActionResult Page36()
+		{
+			return View();
+		}
+
+		public ActionResult Page37()
+		{
+			return View();
+		}
+
+		public ActionResult Page38()
+		{
+			return View();
+		}
+
+		public ActionResult Page39()
+		{
+			return View();
+		}
+
+		public ActionResult Page40()
+		{
+			return View();
+		}
+
+		public ActionResult Page41()
+		{
+			return View();
+		}
+
+		public ActionResult Page42()
+		{
+			return View();
+		}
+
+		public ActionResult Page43()
+		{
+			return View();
+		}
+
+		public ActionResult Page44()
+		{
+			return View();
+		}
+
+		public ActionResult Page45()
+		{
+			return View();
+		}
+
+		public ActionResult Page46()
+		{
+			return View();
+		}
+
+		public ActionResult Page47()
+		{
+			return View();
+		}
 
 
+		public ActionResult Page48()
+		{
+			return View();
+		}
 
 
-    }
+		public ActionResult Page49()
+		{
+			return View();
+		}
+
+
+		public ActionResult Page50()
+		{
+			return View();
+		}
+
+		public ActionResult Page51()
+		{
+			return View();
+		}
+
+		public ActionResult Page52()
+		{
+			return View();
+		}
+
+		public ActionResult Page53()
+		{
+			return View();
+		}
+
+		public ActionResult PageJu()
+		{
+			return View();
+		}
+
+	}
 
 }
    
