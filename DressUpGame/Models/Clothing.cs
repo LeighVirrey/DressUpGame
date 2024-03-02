@@ -19,7 +19,7 @@
 
 		public Clothing(string type, string name, string image)
 		{
-			
+			this.type = type;
 			this.Name = name;
 			this.Image = image;
 		}
