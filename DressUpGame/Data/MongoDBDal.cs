@@ -7,6 +7,7 @@ namespace DressUpGame.Data
     public class MongoDBDal
     {
         private static IMongoCollection<BsonDocument> DBcollection;
+
         public List<BsonDocument> GetImages()
         {
             Setup();
