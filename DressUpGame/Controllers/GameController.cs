@@ -9,6 +9,7 @@ namespace DressUpGame.Controllers
 	{
 		MongoDBDal DBdal = new MongoDBDal();
         List<Clothing> ClothingList = new List<Clothing>();
+		private Character character;
 
 
         //private List<Clothing> clothingList = DBdal.GetImages();
@@ -16,7 +17,10 @@ namespace DressUpGame.Controllers
 		{
 
 			ClothingListm();
-			return View();
+			BsonDocument bsonElements = DBdal.getMia();
+			character = new Character(bsonElements["Image"].ToString(), bsonElements["Name"].ToString(), null, null, null, null, null);
+            var tuple = new Tuple<List<Clothing>, Character>(ClothingList, character);
+			return View(tuple);
 		}
 
 		public IActionResult GameTwo()
