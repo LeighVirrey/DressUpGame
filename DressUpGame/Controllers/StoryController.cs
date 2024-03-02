@@ -431,6 +431,11 @@ namespace DressUpGame.Controllers
 			return View();
 		}
 
+		public ActionResult PageJu()
+		{
+			return View();
+		}
+
 	}
 
 }
