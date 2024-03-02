@@ -8,7 +8,9 @@ namespace DressUpGame.Controllers
 	public class GameController : Controller
 	{
 		MongoDBDal DBdal = new MongoDBDal();
-		List<Clothing> ClothingList = new List<Clothing>();
+
+		//List<Clothing> ClothingList = new List<Clothing>();
+
 		private Character character;
 
 
@@ -17,17 +19,22 @@ namespace DressUpGame.Controllers
 		{
 
 			ClothingListm();
-			return View();
+			BsonDocument bsonElements = DBdal.getMia();
+			character = new Character(bsonElements["Image"].ToString(), bsonElements["Name"].ToString(), null, null, null, null, null);
+            var tuple = new Tuple<List<Clothing>, Character>(ClothingList, character);
+			return View(tuple);
 		}
 
 		public IActionResult GameTwo()
 		{
-			return View();
+            ClothingListm();
+            return View();
 		}
 
 		public IActionResult GameThree()
 		{
-			return View();
+            ClothingListm();
+            return View();
 		}
 
 		public IActionResult SelectClothing(Clothing c)
@@ -78,6 +85,7 @@ namespace DressUpGame.Controllers
 			{
 				if (bs["Type"].ToString() == "Hat" || bs["Type"].ToString() == "Hair" || bs["Type"].ToString() == "Shirt" || bs["Type"].ToString() == "Pants" || bs["Type"].ToString() == "Shoes")
 				{
+<<<<<<< HEAD
 					typeClass.Add(bs["Type"].ToString().ToUpper());
 					img.Add(bs["Image"].ToString());
 					name.Add(bs["Name"].ToString());
@@ -85,6 +93,15 @@ namespace DressUpGame.Controllers
 			}
 
 			for (int i = 0; i <= img.Count() - 1; i++)
+=======
+                    typeClass.Add(bs["Type"].ToString());
+                    img.Add(bs["Image"].ToString());
+                    name.Add(bs["Name"].ToString());
+                }
+            }
+			
+			for(int i = 0; i <= img.Count() - 1; i++)
+>>>>>>> 08bba8ebd4a4fcfd26cafe05afade3723b7398e8
 			{
 				Clothing c = new Clothing(typeClass[i], name[i], img[i]);
 
