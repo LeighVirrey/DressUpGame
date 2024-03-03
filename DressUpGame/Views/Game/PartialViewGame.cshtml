@@ -5,4 +5,9 @@
         <img src="data:image/png;base64,@Model.Image" alt="@Model.Name" />
         <p>@Model.Name</p>
     </div>
+    <form asp-controller="Game" asp-action="SelectClothing" method="post">
+        <input type="hidden" name="c" value="@Model.Name" />
+        <input type="hidden" name="view" value="@ViewBag.Title" />
+        <input type="submit" value="Select" />
+    </form>
 }
