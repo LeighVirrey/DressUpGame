@@ -93,7 +93,6 @@ namespace DressUpGame.Controllers
             }
 			
 			for(int i = 0; i <= img.Count() - 1; i++)
->>>>>>> 08bba8ebd4a4fcfd26cafe05afade3723b7398e8
 			{
 				Clothing c = new Clothing(typeClass[i], name[i], img[i]);
 
