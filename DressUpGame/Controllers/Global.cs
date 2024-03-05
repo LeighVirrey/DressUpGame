@@ -5,5 +5,6 @@ namespace DressUpGame.Controllers
     public class Global
     {
         public static Character Mia = new Character();
+        public static string nextView;
     }
 }

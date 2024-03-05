@@ -266,7 +266,7 @@ namespace DressUpGame.Controllers
 			{
 				BackgroundImgURL = "~/images/black screen.png"
 			};
-			ViewBag.Next = "Page24";
+			Global.nextView = "Page24";
 			return View(scene);
 		}
         public ActionResult Page24()
@@ -335,7 +335,8 @@ namespace DressUpGame.Controllers
 
 		public ActionResult Page35()
 		{
-			return View();
+            Global.nextView = "Page36";
+            return View();
 		}
 
 		public ActionResult Page36()
@@ -395,7 +396,8 @@ namespace DressUpGame.Controllers
 
 		public ActionResult Page47()
 		{
-			return View();
+            Global.nextView = "Page48";
+            return View();
 		}
 
 

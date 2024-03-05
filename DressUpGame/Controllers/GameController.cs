@@ -29,25 +29,21 @@ namespace DressUpGame.Controllers
 		public IActionResult GameTwo()
 		{
             ClothingListm();
-            BsonDocument bsonElements = DBdal.getMia();
-            Global.Mia.Image = bsonElements["Image"].ToString();
             var tuple = new Tuple<List<Clothing>, Character>(ClothingList, Global.Mia);
-            ViewBag.Title = "GameOne";
-            return View();
+            ViewBag.Title = "GameTwo";
+            return View(tuple);
 		}
 
 		public IActionResult GameThree()
 		{
             ClothingListm();
-            BsonDocument bsonElements = DBdal.getMia();
-            Global.Mia.Image = bsonElements["Image"].ToString();
             var tuple = new Tuple<List<Clothing>, Character>(ClothingList, Global.Mia);
-            ViewBag.Title = "GameOne";
-            return View();
+            ViewBag.Title = "GameThree";
+            return View(tuple);
 		}
 		public IActionResult Done()
 		{
-			return RedirectToAction(ViewBag.Next, "Story");
+			return RedirectToAction(Global.nextView, "Story");
 		}
 
 		public IActionResult SelectClothing(string c, string view)

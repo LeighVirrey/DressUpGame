@@ -26,7 +26,40 @@ body {
     width: 100%;
     height: 100%;
 }
-
+.game{
+    display: grid;
+    grid-template-areas: "nothing miaDressUp nothing" "clothes clothes";
+}
+.partialImg{
+    margin-top:75%;
+    grid-area: clothes;
+    display: flex;
+    flex-wrap: wrap;
+}
 .scene-image {
-    max-width: 100%; 
+    max-width: 100%;
     height: 100%;
+}
+.miaContainer{
+    grid-area: miaDressUp;
+    position:relative;
+    margin-left: 35%;
+}
+.miaImg{
+    position:absolute;
+}
+.hat{
+    position:absolute;
+}
+.hair {
+    position: absolute;
+}
+.shirt {
+    position: absolute;
+}
+.pants {
+    position: absolute;
+}
+.shoes {
+    position: absolute;
+}

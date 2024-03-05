@@ -1,31 +1,37 @@
 ﻿@model Tuple<List<Clothing>, Character>
-<div class="miaImg">
-    <img src="data:image/png;base64,@Model.Item2.Image" alt="@Model.Item2.Name" />
-    @if (Model.Item2.Hat != null)
-    {
-        <img src="data:image/png;base64,@Model.Item2.Hat.Image" />
-    }
-    @if (Model.Item2.Hair != null)
-    {
-        <img src="data:image/png;base64,@Model.Item2.Hair.Image" />
-    }
-    @if (Model.Item2.Shirt != null)
-    {
-        <img src="data:image/png;base64,@Model.Item2.Shirt.Image" />
-    }
-    @if (Model.Item2.Pants != null)
-    {
-        <img src="data:image/png;base64,@Model.Item2.Pants.Image" />
-    }
-    @if (Model.Item2.Shoes != null)
-    {
-        <img src="data:image/png;base64,@Model.Item2.Shoes.Image" />
-    }
+<div class="game">
+    <div class="empty"></div>
+    <div class="miaContainer">
+        <img class="miaImg" src="data:image/png;base64,@Model.Item2.Image" alt="@Model.Item2.Name" />
+        @if (Model.Item2.Hair != null)
+        {
+            <img class="hair" src="data:image/png;base64,@Model.Item2.Hair.Image" />
+        }
+        @if (Model.Item2.Hat != null)
+        {
+            <img class="hat" src="data:image/png;base64,@Model.Item2.Hat.Image" />
+        }
+        @if (Model.Item2.Shirt != null)
+        {
+            <img class="shirt" src="data:image/png;base64,@Model.Item2.Shirt.Image" />
+        }
+        @if (Model.Item2.Pants != null)
+        {
+            <img class="pants" src="data:image/png;base64,@Model.Item2.Pants.Image" />
+        }
+        @if (Model.Item2.Shoes != null)
+        {
+            <img class="shoes" src="data:image/png;base64,@Model.Item2.Shoes.Image" />
+        }
+    </div>
+    <div class="partialImg">
+        @foreach (var item in Model.Item1)
+        {
+            <partial name="PartialViewGame" for="@item" />
+        }
+    </div>
 </div>
-@foreach (var item in Model.Item1)
-{
-    <partial name="PartialViewGame" for="@item" />
-}
-<form asp-controller="Story" asp-action="Done" method="post">
+
+<form asp-controller="Game" asp-action="Done" method="post">
     <button type="submit">Finish</button>
 </form>
