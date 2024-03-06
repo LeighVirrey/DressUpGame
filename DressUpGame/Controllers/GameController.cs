@@ -43,6 +43,11 @@ namespace DressUpGame.Controllers
 		}
 		public IActionResult Done()
 		{
+			Global.Mia.Hair = null;
+			Global.Mia.Hat = null;
+			Global.Mia.Shirt = null;
+			Global.Mia.Pants = null;
+			Global.Mia.Shoes = null;
 			return RedirectToAction(Global.nextView, "Story");
 		}
 

@@ -28,7 +28,7 @@ body {
 }
 .game{
     display: grid;
-    grid-template-areas: "nothing miaDressUp nothing" "clothes clothes";
+    grid-template-areas: "miaDressUp" "clothes";
 }
 .partialImg{
     margin-top:75%;
