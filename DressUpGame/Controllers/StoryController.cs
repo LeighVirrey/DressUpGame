@@ -290,152 +290,278 @@ namespace DressUpGame.Controllers
 
 		public ActionResult Page26()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page27()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page28()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page29()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page30()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page31()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page32()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page33()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page34()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page35()
 		{
-            Global.nextView = "Page36";
-            return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			Global.nextView = "Page36";
+            return View(scene);
 		}
 
 		public ActionResult Page36()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page37()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
+		}
+
+		public ActionResult Page37half()
+		{
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page38()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page39()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page40()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page41()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page42()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page43()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page44()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page45()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page46()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page47()
 		{
-            Global.nextView = "Page48";
-            return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			Global.nextView = "Page48";
+            return View(scene);
 		}
 
 
 		public ActionResult Page48()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 
 		public ActionResult Page49()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 
 		public ActionResult Page50()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page51()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult Page52()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+
+			return View(scene);
 		}
 
 		public ActionResult Page53()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 		public ActionResult PageJu()
 		{
-			return View();
+			Scene scene = new Scene()
+			{
+				BackgroundImgURL = "~/images/waiting-room-scene.png"
+			};
+			return View(scene);
 		}
 
 	}
