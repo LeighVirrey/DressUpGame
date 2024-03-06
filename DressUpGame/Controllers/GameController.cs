@@ -12,7 +12,7 @@ namespace DressUpGame.Controllers
         List<Clothing> ClothingList = new List<Clothing>();
 
         //List<Clothing> ClothingList = new List<Clothing>();
-
+		//comment for committing purposes
 
         //private List<Clothing> clothingList = DBdal.GetImages();
         public IActionResult GameOne()
